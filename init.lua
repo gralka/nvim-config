@@ -1,6 +1,7 @@
 require("sets")
 
 require("packer-setup")
+require("after.gitsigns")
 require("after.telescope")
 require("after.treesitter")
 require("after.lsp")
