@@ -1,6 +1,7 @@
 local km = vim.keymap
 
 -- general keybindings
+km.set("n", "<C-k>", "noop")
 km.set("i", "jk", "<ESC>") -- enter Normal mode by hitting "jk" consecutively in Insert mode
 km.set("n", "<S-h>", "^") -- quickly get to the start of the current line
 km.set("n", "<S-l>", "g_") -- quickly get to the end of the line
@@ -41,21 +42,16 @@ km.set("n", "<leader>ws", "<C-w>s") -- split horizontally
 km.set("n", "<leader>we", "<C-w>=") -- make splits even
 
 -- quick split navigation
-km.set("n", "<leader>wh", "<C-w>h<CR>") -- quickly save
-km.set("n", "<leader>wj", "<C-w>j<CR>") -- quickly save
-km.set("n", "<leader>wk", "<C-w>k<CR>") -- quickly save
-km.set("n", "<leader>wl", "<C-w>l<CR>") -- quickly save
+km.set("n", "<leader>wh", "<C-w>h<CR>") -- move left
+km.set("n", "<leader>wj", "<C-w>j<CR>") -- move down
+km.set("n", "<leader>wk", "<C-w>k<CR>") -- move up
+km.set("n", "<leader>wl", "<C-w>l<CR>") -- move right
 
 -- tabs
 km.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
 km.set("n", "<leader>tq", ":tabclose<CR>") -- close current tab
 km.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 km.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
-
-
--- incrementing/decrementing numbers
-km.set("n", "<leader>+", "<C-a>") -- increments a highlighted number
-km.set("n", "<leader>-", "<C-x>") -- decrements a highlighted number
 
 -- vim-maximizer
 km.set("n", "<leader>sm", ":MaximizerToggle<CR>")
