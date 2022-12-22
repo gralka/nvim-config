@@ -36,6 +36,8 @@ return require('packer').startup(function(use)
 
   use 'nvim-lualine/lualine.nvim'
 
+  use 'szw/vim-maximizer'
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = {

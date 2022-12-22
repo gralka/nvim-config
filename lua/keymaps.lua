@@ -7,7 +7,7 @@ km.set("n", "<S-l>", "g_") -- quickly get to the end of the line
 km.set("n", "<S-y>", "yg$") -- yank from current position to the end of the line (like <S-d> for deletion)
 km.set("n", "x", '"_x') -- x doesn't store deleted character
 
-km.set("n", "<leader><space>", ":nohl<CR>") -- clears highlighted results
+-- km.set("n", "<leader><space>", ":nohl<CR>") -- clears highlighted results
 
 km.set("v", "<S-j>", ":m '>+1<CR>gv=gv") -- move text blocks down 
 km.set("v", "<S-k>", ":m '<-2<CR>gv=gv") -- move text blocks up
@@ -18,6 +18,12 @@ km.set("n", "<C-d>", "<C-d>zz") -- page down and center the cursor in the buffer
 km.set("n", "<C-u>", "<C-u>zz") -- page up and center the cursor in the buffer
 
 km.set("x", "<leader>p", "\"_dP") -- do not lose pasted text when highlight-pasting
+
+-- saving and quitting
+km.set("n", "<leader>s", ":w<CR>") -- quickly save
+km.set("n", "<leader>q", ":qall<CR>") -- quickly quit all
+km.set("n", "<leader><S-q>", ":qall!<CR>") -- quickly force quit all
+km.set("n", "<leader>c", ":close<CR>") -- close buffer 
 
 -- copy text to system clipboard
 km.set("n", "<leader>y", "\"+y")
@@ -46,19 +52,13 @@ km.set("n", "<leader>tq", ":tabclose<CR>") -- close current tab
 km.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 km.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
--- saving and quitting
-km.set("n", "<leader>s", ":w<CR>") -- quickly save
-km.set("n", "<leader>q", ":q<CR>") -- quickly quit
-km.set("n", "<leader><S-q>", ":qall<CR>") -- quickly quit all
-km.set("n", "<leader><S-q><S-1>", ":qall!<CR>") -- quickly force quit all
-km.set("n", "<leader>c", ":close<CR>") -- close buffer 
 
 -- incrementing/decrementing numbers
 km.set("n", "<leader>+", "<C-a>") -- increments a highlighted number
 km.set("n", "<leader>-", "<C-x>") -- decrements a highlighted number
 
 -- vim-maximizer
--- km.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+km.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim-tree
 km.set("n", "<leader>b", ":NvimTreeToggle<CR>")
