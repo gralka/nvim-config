@@ -1,4 +1,5 @@
 require("sets")
+require("keymaps")
 
 require("packer-setup")
 require("after.gitsigns")
@@ -9,5 +10,4 @@ require("after.lualine")
 require("after.nvim-tree")
 require("after.undotree")
 
-require("keymaps")
 
