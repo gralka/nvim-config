@@ -1,20 +1,23 @@
 local telescope_status, telescope = pcall(require, "telescope")
-
-if not telescope_status then
-  return
-end
-
 local builtin_setup, builtin = pcall(require, 'telescope.builtin')
+local themes_setup, themes = pcall(require, 'telescope.themes')
 
-if not builtin_setup then
+if not telescope_status or not builtin_setup or not themes_setup then
   return
 end
 
-vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-vim.keymap.set("n", "<leader>pg", builtin.git_files, {})
+vim.keymap.set("n", "<leader>pf", function ()
+  builtin.find_files(themes.get_dropdown())
+end, {})
+
+vim.keymap.set("n", "<leader>pg", function ()
+  builtin.git_files(themes.get_dropdown())
+end, {})
+
 vim.keymap.set("n", "<leader>ps", function ()
   builtin.grep_string({ search = vim.fn.input("Search > ") })
-end)
+end, {})
+
 vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
 
