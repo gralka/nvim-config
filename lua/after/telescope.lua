@@ -6,10 +6,12 @@ if not telescope_status or not builtin_setup or not themes_setup then
   return
 end
 
+vim.keymap.set("n", "<leader>pF", builtin.find_files, {})
 vim.keymap.set("n", "<leader>pf", function ()
   builtin.find_files(themes.get_dropdown())
 end, {})
 
+vim.keymap.set("n", "<leader>pG", builtin.git_files, {})
 vim.keymap.set("n", "<leader>pg", function ()
   builtin.git_files(themes.get_dropdown())
 end, {})
