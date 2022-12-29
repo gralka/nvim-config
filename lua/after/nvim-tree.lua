@@ -5,6 +5,7 @@ if not status then
 end
 
 -- recommended configuration from documentation
+
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -34,3 +35,7 @@ nvimtree.setup({
     side = "right",
   },
 })
+
+local km = vim.keymap
+
+km.set("n", "<leader>b", ":NvimTreeToggle<CR>")

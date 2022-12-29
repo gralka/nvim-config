@@ -10,5 +10,4 @@ require("after.lsp")
 require("after.lualine")
 require("after.nvim-tree")
 require("after.undotree")
-
-
+require("after.vim-maximizer")
