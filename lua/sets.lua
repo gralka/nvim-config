@@ -7,6 +7,11 @@ local options = {
     colorcolumn = "80",
     cursorline = true, -- show the current line where the cursor is
     expandtab = true, -- converts tabs to spaces
+    foldcolumn = "1", -- fold column
+    foldlevel = 99, -- fold level
+    foldlevelstart = 99, -- fold level start
+    foldenable = true, -- enable folding
+    fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]], -- fill chars
     hlsearch = false, -- highlight matches
     incsearch = true, -- incremental search
     ignorecase = true, -- ignore case when searching
@@ -40,6 +45,3 @@ vim.g.mapleader = " " -- set the leader
 -- set the color theme
 vim.cmd("colorscheme gruvbox")
 
--- set the background transparency
-vim.cmd("highlight Normal guibg=none")
-vim.cmd("highlight Normal ctermbg=none")
