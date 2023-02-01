@@ -31,3 +31,18 @@ lsp.on_attach(function (client, buffer)
 end)
 
 lsp.setup()
+
+local status_cmp, cmp = pcall(require, 'cmp')
+
+if not status_cmp then
+  return
+end
+
+local cmp_config = {
+  mapping  = {
+    ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+    ['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+  }
+}
+
+cmp.setup(cmp_config)
