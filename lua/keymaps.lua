@@ -56,6 +56,18 @@ km.set("n", "<leader><space>j", "<C-w>j") -- move down
 km.set("n", "<leader><space>k", "<C-w>k") -- move up
 km.set("n", "<leader><space>l", "<C-w>l") -- move right
 
+-- moving splits
+
+km.set("n", "<leader><space><S-h>", "<C-w><S-h>")
+km.set("n", "<leader><space><S-j>", "<C-w><S-j>")
+km.set("n", "<leader><space><S-k>", "<C-w><S-k>")
+km.set("n", "<leader><space><S-l>", "<C-w><S-l>")
+km.set("n", "<leader><space>r", "<C-w>r")
+km.set("n", "<leader><space><S-r>", "<C-w><S-r>")
+km.set("n", "<leader><space>x", "<C-w><S-x>")
+km.set("n", "<leader><space><S-x>", "<C-w><S-x>")
+km.set("n", "<leader><space><S-t>", "<C-w><S-t>")
+
 -- § WORKING WITH TABS 
 
 km.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
