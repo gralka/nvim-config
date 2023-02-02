@@ -89,3 +89,7 @@ km.set("n", "<leader>k", "<cmd>lprevious<CR>zz")
 -- nvim-tree
 
 km.set("n", "<leader>b", ":NvimTreeToggle<CR>")
+
+-- LSP
+
+km.set("n", "<leader>lr", ":LspRestart<CR>")
