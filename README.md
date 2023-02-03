@@ -6,6 +6,7 @@ This repo, like many other projects of mine, is a continual work in progress.
 
 Plugins are registered with Packer in `/lua/packer-setup.lua`. I use the following plugins, and have congured each of them in the `/lua/after` directory:
 
+- codeium
 - fugitive
 - gitsigns
 - lsp-zero
