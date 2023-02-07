@@ -23,20 +23,29 @@ return require('packer').startup(function (use)
 
   use { 'andymass/vim-matchup', event = 'VimEnter' }
 
-  use {
-    'Exafunction/codeium.vim',
-    config = function ()
-      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<C-d>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    end
-  }
+  -- use {
+  --   'Exafunction/codeium.vim',
+  --   config = function ()
+  --     vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+  --     vim.keymap.set('i', '<C-d>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+  --     vim.keymap.set('i', '<C-f>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+  --     vim.keymap.set('i', '<C-b>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+  --     vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+  --   end
+  -- }
 
   use { 'dracula/vim', as = 'dracula' }
 
   use { 'ellisonleao/gruvbox.nvim', as = 'gruvbox' }
+
+  use {
+    'github/copilot.vim', as = 'copilot',
+    config = function ()
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.api.nvim_set_keymap("i", "<C-d>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+    end
+  }
 
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
