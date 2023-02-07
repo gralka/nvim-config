@@ -2,6 +2,7 @@ require("sets")
 require("keymaps")
 
 require("packer-setup")
+require("after.copilot")
 require("after.fugitive")
 require("after.gitsigns")
 require("after.telescope")
