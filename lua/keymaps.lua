@@ -75,6 +75,18 @@ km.set("n", "<leader>tq", ":tabclose<CR>") -- close current tab
 km.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 km.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
+-- jumping to tabs
+
+km.set("n", "<leader>t1", "1gt") -- move tab to position 1
+km.set("n", "<leader>t2", "2gt") -- move tab to position 2
+km.set("n", "<leader>t3", "3gt") -- move tab to position 3
+km.set("n", "<leader>t4", "4gt") -- move tab to position 4
+km.set("n", "<leader>t5", "5gt") -- move tab to position 5
+km.set("n", "<leader>t6", "6gt") -- move tab to position 6
+km.set("n", "<leader>t7", "7gt") -- move tab to position 7
+km.set("n", "<leader>t8", "8gt") -- move tab to position 8
+km.set("n", "<leader>t9", "9gt") -- move tab to position 9
+
 -- moving tabs
 
 km.set("n", "<leader>tmf", ":tabmove 0<CR>") -- move tab to first position
