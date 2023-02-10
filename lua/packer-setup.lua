@@ -40,22 +40,14 @@ return require('packer').startup(function (use)
 
   use { 'ellisonleao/gruvbox.nvim', as = 'gruvbox' }
 
-  -- use { 'github/copilot.vim', as = 'copilot' }
   use {
-    "zbirenbaum/copilot.lua",
+    'github/copilot.vim',
     as = 'copilot',
-    cmd = 'Copilot',
-    event = 'InsertEnter',
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-          keymap = {
-            accept = '<C-d>',
-            next = '<C-f>',
-            previous = '<C-b>',
-          }
-        }
-      })
+    config = function ()
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      
+      vim.api.nvim_set_keymap("i", "<C-d>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
     end,
   }
 
