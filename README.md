@@ -13,7 +13,7 @@ I use the following plugins, and have configured each of them in the `/lua/after
 - gitsigns
 - lsp-zero
 - lualine
-- nvm-tree
+- nvim-tree
 - telescope
 - treesitter
 - ufo
