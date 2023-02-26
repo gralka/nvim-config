@@ -27,11 +27,10 @@ nvimtree.setup({
       window_picker = {
         enable = false,
       },
-      quit_on_open = true,
     },
   },
   view = {
-    width = 55,
+    width = 65,
     side = "right",
   },
 })
