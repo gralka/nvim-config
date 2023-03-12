@@ -43,5 +43,5 @@ end
 vim.g.mapleader = " " -- set the leader
 
 -- set the color theme
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme dracula")
 
