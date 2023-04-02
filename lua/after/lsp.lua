@@ -8,8 +8,7 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
   'tsserver',
-  'eslint',
-  'sumneko_lua'
+  'eslint'
 })
 
 lsp.nvim_workspace()

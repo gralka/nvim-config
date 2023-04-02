@@ -36,6 +36,10 @@ return require('packer').startup(function (use)
   --   end
   -- }
 
+  use { 'neoclide/coc.nvim', branch = 'release' }
+  use 'neoclide/coc-tsserver'
+  use 'iamcco/coc-angular'
+
   use { 'dracula/vim', as = 'dracula' }
 
   use { 'ellisonleao/gruvbox.nvim', as = 'gruvbox' }
